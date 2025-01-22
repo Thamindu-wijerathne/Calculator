@@ -3,12 +3,11 @@ function calculator()
                  'Position', [500, 300, 310, 650], 'MenuBar', 'none', ...
                  'Resize', 'on');
 
-    % Display field with custom colors
-    displayBox = uicontrol('Style', 'edit', 'String', '', ...
-                           'Position', [20, 600, 270, 50], ...
-                           'FontSize', 16, 'HorizontalAlignment', 'right', ...
-                           'BackgroundColor', [0.9, 0.9, 0.9], ...
-                           'ForegroundColor', [0, 0, 0]);
+displayBox = uicontrol('Style', 'edit', 'String', '', ...
+                       'Position', [20, 600, 270, 50], ...
+                       'FontSize', 16, 'HorizontalAlignment', 'right', ...
+                       'BackgroundColor', [0.9, 1, 0.9], ... % Light green background
+                       'ForegroundColor', [0, 0, 0]);
 
     % Button labels
     btnLabels = {'1/x', 'e', 'x^2', 'x^y',...
@@ -45,9 +44,39 @@ function calculator()
         elseif strcmp(btnLabels{i}, '=')  % Blue background for '='
             bgColor = [0, 0, 1];
             fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '0')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '1')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '2')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '3')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '4')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '5')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '6')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '7')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '8')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
+        elseif strcmp(btnLabels{i}, '9')  % Blue background for '='
+            bgColor = [0.6, 0.6, 0.6];
+            fgColor = [1, 1, 1];  % White text
         else
-            bgColor = [0.8, 0.8, 0.8];  % Light gray background for others
-            fgColor = [0, 0, 0];        % Black text
+            bgColor = [0.2, 0.2, 0.2];  % Light gray background for others
+            fgColor = [1, 1, 1];  % White text
         end
 
         % Create button
@@ -226,4 +255,3 @@ function buttonPress(src, displayBox)
 end
 
 calculator();
-
