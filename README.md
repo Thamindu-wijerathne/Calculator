@@ -1,7 +1,4 @@
-Here's some context you can include in your GitHub README file for your Octave Calculator project:  
-
 ---
-
 # Octave Calculator  
 
 Octave Calculator is a graphical calculator built using GNU Octave's GUI components. It features an intuitive interface with various mathematical functions, including basic arithmetic, trigonometric operations, exponents, factorials, and special constants like π and e.  
@@ -39,5 +36,3 @@ Click the buttons to perform calculations or enter expressions manually. Press `
 - Additional mathematical operations  
 
 ---
-
-This README provides an overview of your project, its features, and how users can install and use it. Let me know if you want any modifications! 🚀
