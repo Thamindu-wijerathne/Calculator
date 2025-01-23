@@ -12,7 +12,11 @@ Octave Calculator is a graphical calculator built using GNU Octave's GUI compone
 - **Trigonometry**: Sine, cosine, tangent, secant, cosecant, cotangent (in degrees)  
 - **Special Functions**: Factorial, reciprocal, Euler’s number (e)  
 - **Clear & Backspace**: Reset calculations or delete last entry  
-- **Interactive UI**: Well-organized button layout with color-coded functionalities  
+- **Interactive UI**: Well-organized button layout with color-coded functionalities
+
+## Calculator Preview
+
+![Octave Calculator](calculator.png)
 
 ## Installation  
 1. Ensure GNU Octave is installed on your system.  
