@@ -1,3 +1,5 @@
+
+
 function calculator()
     fig = figure('Name', 'Octave Calculator', 'NumberTitle', 'off', ...
                  'Position', [500, 100, 310, 650], 'MenuBar', 'none', ...
@@ -10,8 +12,9 @@ displayBox = uicontrol('Style', 'edit', 'String', '', ...
                        'ForegroundColor', [0, 0, 0]);
 
     % Button labels
-    btnLabels = {'1/x', 'e', 'x^2', 'x^y',...
-                 'secd','cosecd','cotd','pi', ...
+    btnLabels = {'x^y','x^1/y','x^1/2','x^1/3', ...
+                 '1/x', 'e', 'x^2', 'x^3',...
+                 'secd','cosecd','cotd','!', ...
                  'sind','cosd','tand','pi', ...
                  '(', ')', '⌫', 'C', ...
                  '7', '8', '9', '/', ...
@@ -210,12 +213,10 @@ function buttonPress(src, displayBox)
 
         case '1/x'  % Reciprocal (1/x)
             try
-                value = str2double(currentText);
-                if value ~= 0
-                    result = 1 / value;
-                    set(displayBox, 'String', num2str(result));
+                if isempty(currentText)
+                    set(displayBox, 'String', '1/');
                 else
-                    set(displayBox, 'String', 'Error');
+                    set(displayBox, 'String', [currentText '1/']);
                 end
             catch
                 set(displayBox, 'String', 'Error');
@@ -234,17 +235,61 @@ function buttonPress(src, displayBox)
                 set(displayBox, 'String', num2str(result));
             end
 
+        case 'x^1/2'  % x^2
+          try
+            if isempty(currentText)
+              set(displayBox, 'String', 'Error');
+            else
+              set(displayBox, 'String', [currentText '^(1/2)']);
+            end
+          catch
+            set(displayBox, 'String', 'Error');
+          end
+
+
+        case 'x^1/3'  % x^2
+          try
+            if isempty(currentText)
+              set(displayBox, 'String', 'Error');
+            else
+              set(displayBox, 'String', [currentText '^(1/3)']);
+            end
+          catch
+            set(displayBox, 'String', 'Error');
+          end
+
+        case 'x^1/y'  % x^2
+            if isempty(currentText) || currentText(end) == '('
+                set(displayBox, 'String', [currentText '']);
+            else
+                set(displayBox, 'String', [currentText '^(1/']);
+            end
 
         case 'x^2'  % x^2
           try
-            set(displayBox, 'String', [currentText '.^2']);
+            if isempty(currentText)
+              set(displayBox, 'String', 'Error');
+            else
+              set(displayBox, 'String', [currentText '^2']);
+            end
+          catch
+            set(displayBox, 'String', 'Error');
+          end
+
+       case 'x^3'  % x^2
+          try
+            if isempty(currentText)
+              set(displayBox, 'String', 'Error');
+            else
+              set(displayBox, 'String', [currentText '^3']);
+            end
           catch
             set(displayBox, 'String', 'Error');
           end
 
         case 'x^y'  % x^y
             if isempty(currentText) || currentText(end) == '('
-                set(displayBox, 'String', [currentText '^']);
+                set(displayBox, 'String', [currentText '']);
             else
                 set(displayBox, 'String', [currentText '^']);
             end
