@@ -16,7 +16,7 @@ Octave Calculator is a graphical calculator built using GNU Octave's GUI compone
 
 ## Calculator Preview
 
-![Octave Calculator](calculator.png)
+![Octave Calculator](calculator.jpg)
 
 ## Installation  
 1. Ensure GNU Octave is installed on your system.  
